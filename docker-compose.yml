@@ -5,8 +5,8 @@ services:
     build:
       context: .
       args:
-        ARGUMENT_VAR: ${example_var}
-        ANOTHER_ARG: ${another_var}
+        - ARGUMENT_VAR=${example_var}
+        - ANOTHER_ARG=${another_var}
     container_name: dog-backend
     ports:
       - "8000:8000"
