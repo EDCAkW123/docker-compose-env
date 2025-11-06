@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  dog-backend:
+    build:
+      context: .
+      args:
+        ARGUMENT_VAR: ${example_var}
+        ANOTHER_ARG: ${another_var}
+    container_name: dog-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - example_var=${example_var}
+      - another_var=${another_var}
+
